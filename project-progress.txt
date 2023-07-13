@@ -1,3 +1,8 @@
 12.07.2023
 Project orientation
 Created a new repository "Rezeptbuch" in Github.
+
+13.07.2023
+Established protocol. Added the protocol (Rezeptbuch-protocol.pdf) in the assets folder
+Designed logo
+Home page basic layout finished
