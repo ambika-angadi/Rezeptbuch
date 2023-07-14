@@ -6,3 +6,9 @@ Created a new repository "Rezeptbuch" in Github.
 Established protocol. Added the protocol (Rezeptbuch-protocol.pdf) in the assets folder
 Designed logo
 Home page basic layout finished
+
+14.07.2023
+Improved Home page, modified by removing vertical navigation bar
+Finished Starters, Main course and Desserts page
+I am not sure how to implement Javascript in the website
+
