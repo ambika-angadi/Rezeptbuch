@@ -17,3 +17,6 @@ Added add_recipe.html where a new recipe is added successfully and the recipe is
 added code to script.js to open add_recipe.html upon cliking Add a Recipe link on the home page
 In the landing page implemented local data storage to save the recipe details
 Problem: the recipe is displayed on the add_recipe page upon submission. But it needs to be displayed upon clicking a recipe card in the starters, main course and desserts pages. Working on this further.
+Added edit_recipe.html and delete_recipe.html
+Added Favourites section
+Problem: recipe displaying on the same page not resolved
