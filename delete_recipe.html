@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe List</title>
+    </head>
+    <body>
+        <!-- Recipe List -->
+        <div id="recipeList" class="starters-list"></div>
+
+        <script>
+            // Get DOM element
+            const recipeDiv = document.getElementById('recipeList');
+
+            // Function to display recipe cards
+            function displayRecipe(recipe) {
+                const recipeCard = document.createElement('div');
+                recipeCard.classList.add('recipe-card');
+                recipeCard.innerHTML = `
+                    <h3>${recipe.name}</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        ${recipe.ingredients.map(ingr => `<li>${ingr}</li>`).join('')}
+                    </ul>
+                    <p><strong>Method:</strong></p>
+                    <p>${recipe.instructions.join('<br>')}</p>
+                    <img src="${recipe.image}" alt="Recipe Image" style="width: 200px; height: 100px;">
+                    <button class="delete-button" data-name="${recipe.name}">Delete</button>
+                `;
+
+                const deleteButton = recipeCard.querySelector('.delete-button');
+                deleteButton.addEventListener('click', handleDelete);
+
+                recipeDiv.appendChild(recipeCard);
+            }
+
+            // Function to handle recipe delete
+            function handleDelete(event) {
+                const recipeName = event.target.getAttribute('data-name');
+                const recipeCard = event.target.parentNode;
+                recipeCard.remove();
+
+                // Remove the recipe from local storage
+                const storedRecipe = JSON.parse(localStorage.getItem("recipe"));
+                if (storedRecipe && storedRecipe.name === recipeName) {
+                    localStorage.removeItem("recipe");
+                }
+            }
+
+            // Load recipes from local storage on page load
+            function loadRecipes() {
+                const storedRecipe = JSON.parse(localStorage.getItem("recipe"));
+                if (storedRecipe) {
+                    displayRecipe(storedRecipe);
+                }
+            }
+
+            // Add event listener to load recipes on page load
+            window.addEventListener('DOMContentLoaded', loadRecipes);
+        </script>
+    </body>
+</html>

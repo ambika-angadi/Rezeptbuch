@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Recipe page</title>
+    </head>
+    <body>
+        <!-- Edit Recipe Form -->
+        <h1>Edit Recipe</h1>
+        <form>
+            <label for="edit-recipe-name">Name:</label>
+            <input type="text" id="edit-recipe-name" required>
+            <br>
+            <label for="edit-recipe-ingredients">Ingredients:</label>
+            <textarea id="edit-recipe-ingredients" rows="5" required></textarea>
+            <br>
+            <label for="edit-recipe-method">Method:</label>
+            <textarea id="edit-recipe-method" rows="10" required></textarea>
+            <br>
+            <label for="edit-recipe-image">Image Source:</label>
+            <input type="text" id="edit-recipe-image" required>
+            <br>
+            <button type="submit">Edit Recipe</button>
+        </form>
+
+        <script>
+            // Get the recipe from local storage
+            const recipe = JSON.parse(localStorage.getItem("recipe"));
+
+            // Fill the form fields with the current recipe details
+            document.getElementById('edit-recipe-name').value = recipe.name;
+            document.getElementById('edit-recipe-ingredients').value = recipe.ingredients.join('\n');
+            document.getElementById('edit-recipe-method').value = recipe.instructions.join('\n');
+            document.getElementById('edit-recipe-image').value = recipe.image;
+
+            // Handle form submit
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Get updated form input values
+                const updatedName = document.getElementById('edit-recipe-name').value;
+                const updatedIngredients = document.getElementById('edit-recipe-ingredients').value.split('\n').map(item => item.trim()).filter(item => item !== '');
+                const updatedInstructions = document.getElementById('edit-recipe-method').value.split('\n').map(item => item.trim()).filter(item => item !== '');
+                const updatedImage = document.getElementById('edit-recipe-image').value;
+
+                // Check if updated recipe details are valid
+                if (updatedName && updatedIngredients.length > 0 && updatedInstructions.length > 0 && updatedImage) {
+                    const updatedRecipe = {
+                        name: updatedName,
+                        ingredients: updatedIngredients,
+                        instructions: updatedInstructions,
+                        image: updatedImage
+                    };
+
+                    // Save the updated recipe in local storage
+                    localStorage.setItem("recipe", JSON.stringify(updatedRecipe));
+
+                    // Redirect back to the add_recipe.html page
+                    window.location.href = 'add_recipe.html';
+                }
+            });
+        </script>
+    </body>
+</html>
