@@ -12,3 +12,8 @@ Improved Home page, modified by removing vertical navigation bar
 Finished Starters, Main course and Desserts page
 I am not sure how to implement Javascript in the website
 
+16.07.2023
+Added add_recipe.html where a new recipe is added successfully and the recipe is displayed on the same page after form submit
+added code to script.js to open add_recipe.html upon cliking Add a Recipe link on the home page
+In the landing page implemented local data storage to save the recipe details
+Problem: the recipe is displayed on the add_recipe page upon submission. But it needs to be displayed upon clicking a recipe card in the starters, main course and desserts pages. Working on this further.

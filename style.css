@@ -100,9 +100,8 @@ nav ul li a:hover::after{
 a:hover {
     background-color:lightpink;
  }
-
- .page-footer {
-    background-color: rgb(200, 174, 178);
+.page-footer {
+    background-color: lightpink;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,7 +134,7 @@ a:hover {
     background-image: url("assets/lukas-blazek-EWDvHNNfUmQ-unsplash.jpg");
     background-size: cover;
     background-position: center;
-    /*margin-top: 0;*/
+    /*margin-top: 100px;*/
 }
 .starters-list{
     display: grid;
