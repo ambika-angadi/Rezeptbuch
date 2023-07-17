@@ -5,23 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rezeptbuch website</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/60456600bd.js" crossorigin="anonymous"></script>
     </head>
     <body id="home-id">
         <div id="header">
             <div class="container">
                 <nav class="nav-bar">
-                    <img src="assets/logo.png" class="logo">
+                    <img src="assets/logo3.png" class="logo">
                     <ul>
                         <li><a href="#home-id">Home</a></li>
                         <li><a href="#starters-id">Starters & Drinks</a></li>
                         <li><a href="#maincourse-id">Main course</a></li>
                         <li><a href="#desserts-id">Desserts</a></li>
                         <li><a href="#">Favourites</a></li>
-                        <li><a href="add_recipe.html" target="_blank" id="addRecipeLink">Add a Recipe</a></li>
-                        <li><a href="edit_recipe.html" target="_blank" id="editRecipeLink">Edit a Recipe</a></li> 
-                        <li><a href="delete_recipe.html" target="_blank" id="deleteRecipeLink">Delete a Recipe</a></li>
+                        <li><a id="addRecipeLink">Add a Recipe</a></li>
                     </ul>
                 </nav>
             </div>
@@ -61,7 +58,7 @@
             <div class="starters" id="starters-id">
                 <div class="container">
                     <h1 class="sub-title">Here is the Starters variety....</h1>
-                    <div class="starters-list">
+                    <div class="starters-list" id="starter_list">
                         <div class="starter">
                             <img src="assets/Mango-Lassi.jpg" width="200" height="300">
                                 <h3>Mango Lassi</h3>
@@ -136,5 +133,36 @@
             </div>
         </div>
     </div>
+
+    <!--------------------Add Recipe page--------------------->
+    <div id="add">
+        <div>
+        <h2>Add Recipe</h2>
+         
+        <label id="name-lbl">Name :</label><br>
+        <input size="50" type="text" id="name" name="name"><br>
+        <label id="Ingredients">Ingredients: :</label><br>
+        <textarea id="Ingredients_area" rows="3" cols="53"></textarea><br>
+        <label id="Method">Method:</label><br>
+        <textarea id="Method_area" rows="3" cols="53"></textarea><br>
+        <label id="Image">Image Source:</label><br>
+        <input size="50" type="text" id="image_src" name="image-src"><br>
+        <label id="category">category:</label><br>
+        <select id="category-op">
+         <option >----------------------</option>
+         <option >Starters & Drinks</option>
+         <option >Main course</option>
+         <option >Desserts</option>
+        
+        </select><br>
+        
+        <br><button onclick="addRecipe()">Add Recipe</button>
+        <input type="reset" value="cancel" onclick="hide()">     
+        </div>
+        </div>
+        <script src="script.js"></script>
+
+        <!-----------------------Edit Recipe Page-------------------->
+        
     </body>
 </html>
