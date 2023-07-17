@@ -17,7 +17,7 @@
                         <li><a href="#starters-id">Starters & Drinks</a></li>
                         <li><a href="#maincourse-id">Main course</a></li>
                         <li><a href="#desserts-id">Desserts</a></li>
-                        <li><a href="#">Favourites</a></li>
+                        <li><a href="#fav-id">Favourites</a></li>
                         <li><a id="addRecipeLink">Add a Recipe</a></li>
                     </ul>
                 </nav>
@@ -84,7 +84,7 @@
 <div class="maincourse" id="maincourse-id">
     <div class="container">
         <h1 class="sub-title">Here is the Main course variety....</h1>
-        <div class="maincourse-list">
+        <div class="maincourse-list" id="maincourse_list">
             <div class="maincoursecard">
                 <img src="assets/vegetable-biryani.jpg" width="200" height="300">
                     <h3>Veg Biryani</h3>
@@ -111,7 +111,7 @@
     <div class="desserts" id="desserts-id">
         <div class="container">
             <h1 class="sub-title">Here is the Desserts variety....</h1>
-            <div class="desserts-list">
+            <div class="desserts-list" id="dessert_list">
                 <div class="dessert">
                     <img src="assets/rawa-kesri.jpg" width="200" height="300">
                         <h3>Rawa Kesri</h3>
@@ -134,6 +134,20 @@
         </div>
     </div>
 
+    <!------------------------------Favourites Page------------------>
+    <div class="favourites" id="fav-id">
+        <div class="container">
+            <h1 class="sub-title">Here is my favourites list....</h1>
+            <div class="favourites-list">
+                <div class="favourite">
+                    <img src="assets/Mango-Lassi.jpg" width="200" height="300">
+                        <h3>Mango Lassi</h3>
+                        <p>Drink made with mango and yoghurt</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--------------------Add Recipe page--------------------->
     <div id="add">
         <div>
@@ -150,19 +164,16 @@
         <label id="category">category:</label><br>
         <select id="category-op">
          <option >----------------------</option>
-         <option >Starters & Drinks</option>
-         <option >Main course</option>
-         <option >Desserts</option>
+         <option value="starter" >Starters & Drinks</option>
+         <option value="main">Main course</option>
+         <option value="dessert">Desserts</option>
         
         </select><br>
         
         <br><button onclick="addRecipe()">Add Recipe</button>
-        <input type="reset" value="cancel" onclick="hide()">     
+        <input type="reset" value="cancel" onclick="hide()"> 
         </div>
         </div>
         <script src="script.js"></script>
-
-        <!-----------------------Edit Recipe Page-------------------->
-        
     </body>
 </html>

@@ -20,3 +20,8 @@ Problem: the recipe is displayed on the add_recipe page upon submission. But it 
 Added edit_recipe.html and delete_recipe.html
 Added Favourites section
 Problem: recipe displaying on the same page not resolved
+
+17.07.2023
+Changed prototype
+Add recipe and edit recipe coded and working
+Recipes not being added to respective recipe cards. Still fixing the problem

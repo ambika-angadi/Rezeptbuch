@@ -23,27 +23,36 @@ function addRecipe(){
   let div = document.createElement("div");
   div.classList.add("starter");
   list.appendChild(div);
+
   let img = document.createElement("img");
   img.setAttribute("src", image.value);
   img.style.width="200";
   img.style.height="300";
   div.appendChild(img);
+
   let name=document.createElement("h3");
   name.textContent=recipename.value;
   div.appendChild(name);
+
   // info
 let edit=document.createElement("button");
   edit.textContent="Edit";
+  edit.classList.add("edit"); 
   div.appendChild(edit);
+
   let del=document.createElement("button");
   del.textContent="Delete";
   del.classList.add("delete");
   div.appendChild(del);
+
   let ingredient=document.createElement("p");
   ingredient.textContent=Ingredients.value.split("\n");
   div.appendChild(ingredient);
+  ingredient.classList.add("ingredients");
+
   let methods=document.createElement("p");
   methods.textContent=Method.value;
+  methods.classList.add("methods");
   div.appendChild(methods);
   }
  recipename.value="";
@@ -71,3 +80,29 @@ function show(){
   list.innerHTML= localStorage.getItem("data")
 }
 show();
+
+//Edit Recipe
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('edit')) {
+    editRecipe(e.target.parentElement);
+  }
+});
+
+function editRecipe(recipeElement) {
+  const name = recipeElement.querySelector('h3');
+  const ingredients = recipeElement.querySelector('p.ingredients');
+  const method = recipeElement.querySelector('p.methods');
+  
+  // Show the add recipe form
+  document.getElementById('add').style.display = 'block';
+
+  // Populate the form fields with the recipe data
+  document.getElementById('name').value = name.textContent;
+  document.getElementById('Ingredients_area').value = ingredients.textContent;
+  document.getElementById('Method_area').value = method.textContent;
+  
+  // Remove the existing recipe from the list
+  recipeElement.remove();
+  save();
+}
+
