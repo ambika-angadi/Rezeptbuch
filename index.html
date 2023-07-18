@@ -134,20 +134,22 @@
         </div>
     </div>
 
-    <!------------------------------Favourites Page------------------>
-    <div class="favourites" id="fav-id">
-        <div class="container">
-            <h1 class="sub-title">Here is my favourites list....</h1>
-            <div class="favourites-list">
-                <div class="favourite">
-                    <img src="assets/Mango-Lassi.jpg" width="200" height="300">
-                        <h3>Mango Lassi</h3>
-                        <p>Drink made with mango and yoghurt</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
+    <!------------------------------Favorites Page------------------>
+<div class="favorites" id="fav-id">
+    <div class="container">
+      <h1 class="sub-title">Here is my favorites list....</h1>
+      <ul class="favorites-list" id="favorites_list">
+        <!-- Existing favorite recipe(s) -->
+        <li class="favorite">
+          <!--<img src="assets/Mango-Lassi.jpg" width="200" height="300">
+          <h3>Mango Lassi</h3>
+          <p>Drink made with mango and yoghurt</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>-->
+        </li>
+      </ul>
     </div>
+  </div>
+  
     <!--------------------Add Recipe page--------------------->
     <div id="add">
         <div>
@@ -172,6 +174,9 @@
         
         <br><button onclick="addRecipe()">Add Recipe</button>
         <input type="reset" value="cancel" onclick="hide()"> 
+
+        <!---<br><button onclick="editRecipe()">Edit Recipe</button>
+        <input type="reset" value="Cancel" onclick="hide()">-->    
         </div>
         </div>
         <script src="script.js"></script>

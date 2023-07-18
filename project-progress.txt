@@ -25,3 +25,10 @@ Problem: recipe displaying on the same page not resolved
 Changed prototype
 Add recipe and edit recipe coded and working
 Recipes not being added to respective recipe cards. Still fixing the problem
+
+18.07.2023
+Recipes are being displayed in the respaective category.
+Favourites function coded and working. Favourited recipes displayed in the favourites section
+Local storage working well, the added, edited and favourited recipes are loaded even after the page refresh
+Basic requirements of the project (add, edit, delete, favourites, organizing recipes in respective categories) are done
+Problem: The recipe details are being added within the recipe card which is not readable. Need to implement the code in such a way that when I click on a recipe card, the recipe details open in a modal window.
