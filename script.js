@@ -12,6 +12,7 @@ function hide() {
 }
 
 const recipename = document.getElementById("name");
+const Description = document.getElementById("Description_area");
 const Ingredients = document.getElementById("Ingredients_area");
 const Method = document.getElementById("Method_area");
 const image = document.getElementById("image_src");
@@ -46,16 +47,11 @@ function addRecipe() {
         name.textContent = recipename.value;
         div.appendChild(name);
 
-        let edit = document.createElement("button");
-        edit.textContent = "Edit";
-        //new line from edit script.js
-        edit.classList.add("edit");
-        div.appendChild(edit);
-
-        let del = document.createElement("button");
-        del.textContent = "Delete";
-        del.classList.add("delete");
-        div.appendChild(del);
+        let description = document.createElement("p");
+        description.textContent = Description.value.split("\n");
+        div.appendChild(description);
+        //new line from edit script
+        description.classList.add("descriptions");
 
         let ingredient = document.createElement("p");
         ingredient.textContent = Ingredients.value.split("\n");
@@ -69,10 +65,26 @@ function addRecipe() {
         methods.classList.add("methods");
         div.appendChild(methods);
 
+        let edit = document.createElement("button");
+        edit.textContent = "Edit";
+        //new line from edit script.js
+        edit.classList.add("edit");
+        div.appendChild(edit);
+
+        let del = document.createElement("button");
+        del.textContent = "Delete";
+        del.classList.add("delete");
+        div.appendChild(del);
+
         let fav=document.createElement("button");
         fav.textContent="Favourite";
         fav.classList.add("favourite"); 
         div.appendChild(fav);
+
+        let view=document.createElement("button");
+        view.textContent="View Recipe";
+        view.classList.add("view"); 
+        div.appendChild(view);
 
         //new lines for fav
         fav.addEventListener("click", function () {
@@ -105,16 +117,11 @@ function addRecipe() {
         name.textContent = recipename.value;
         div.appendChild(name);
 
-        let edit = document.createElement("button");
-        edit.textContent = "Edit";
-        //new line from edit script.js
-        edit.classList.add("edit");
-        div.appendChild(edit);
-
-        let del = document.createElement("button");
-        del.textContent = "Delete";
-        del.classList.add("delete");
-        div.appendChild(del);
+        let description = document.createElement("p");
+        description.textContent = Description.value.split("\n");
+        div.appendChild(description);
+        //new line from edit script
+        description.classList.add("descriptions");
 
         let ingredient = document.createElement("p");
         ingredient.textContent = Ingredients.value.split("\n");
@@ -128,10 +135,26 @@ function addRecipe() {
         methods.classList.add("methods");
         div.appendChild(methods);
 
+        let edit = document.createElement("button");
+        edit.textContent = "Edit";
+        //new line from edit script.js
+        edit.classList.add("edit");
+        div.appendChild(edit);
+
+        let del = document.createElement("button");
+        del.textContent = "Delete";
+        del.classList.add("delete");
+        div.appendChild(del);
+
         let fav=document.createElement("button");
         fav.textContent="Favourite";
         fav.classList.add("favourite"); 
         div.appendChild(fav);
+
+        let view=document.createElement("button");
+        view.textContent="View Recipe";
+        view.classList.add("view"); 
+        div.appendChild(view);
 
         //new lines for fav
         fav.addEventListener("click", function () {
@@ -164,16 +187,11 @@ function addRecipe() {
         name.textContent = recipename.value;
         div.appendChild(name);
 
-        let edit = document.createElement("button");
-        edit.textContent = "Edit";
-        //new line from edit script.js
-        edit.classList.add("edit");
-        div.appendChild(edit);
-
-        let del = document.createElement("button");
-        del.textContent = "Delete";
-        del.classList.add("delete");
-        div.appendChild(del);
+        let description = document.createElement("p");
+        description.textContent = Description.value.split("\n");
+        div.appendChild(description);
+        //new line from edit script
+        description.classList.add("descriptions");
 
         let ingredient = document.createElement("p");
         ingredient.textContent = Ingredients.value.split("\n");
@@ -187,10 +205,26 @@ function addRecipe() {
         methods.classList.add("methods");
         div.appendChild(methods);
 
+        let edit = document.createElement("button");
+        edit.textContent = "Edit";
+        //new line from edit script.js
+        edit.classList.add("edit");
+        div.appendChild(edit);
+
+        let del = document.createElement("button");
+        del.textContent = "Delete";
+        del.classList.add("delete");
+        div.appendChild(del);
+
         let fav=document.createElement("button");
         fav.textContent="Favourite";
         fav.classList.add("favourite"); 
         div.appendChild(fav);
+
+        let view=document.createElement("button");
+        view.textContent="View Recipe";
+        view.classList.add("view"); 
+        div.appendChild(view);
         //new lines for fav
         fav.addEventListener("click", function () {
             // Clone the recipe and append it to the favorites list
@@ -214,6 +248,7 @@ function addRecipe() {
     recipename.value = "";
     image.value = "";
     Ingredients.value = "";
+    Description.value = "";
     Method.value = "";
     hide();
     save();
@@ -292,6 +327,7 @@ document.addEventListener('click', function(e) {
   
   function editRecipe(recipeElement) {
     const name = recipeElement.querySelector('h3');
+    const description = recipeElement.querySelector("p.descriptions");
     const ingredients = recipeElement.querySelector('p.ingredients');
     const method = recipeElement.querySelector('p.methods');
     
@@ -300,6 +336,7 @@ document.addEventListener('click', function(e) {
   
     // Populate the form fields with the recipe data
     document.getElementById('name').value = name.textContent;
+    document.getElementById('Description_area').value = description.textContent;
     document.getElementById('Ingredients_area').value = ingredients.textContent;
     document.getElementById('Method_area').value = method.textContent;
     
@@ -324,4 +361,3 @@ function saveFavorites() {
   
   
   
-

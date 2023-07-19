@@ -27,8 +27,14 @@ Add recipe and edit recipe coded and working
 Recipes not being added to respective recipe cards. Still fixing the problem
 
 18.07.2023
-Recipes are being displayed in the respaective category.
+Recipes are being displayed in the respective category.
 Favourites function coded and working. Favourited recipes displayed in the favourites section
 Local storage working well, the added, edited and favourited recipes are loaded even after the page refresh
 Basic requirements of the project (add, edit, delete, favourites, organizing recipes in respective categories) are done
 Problem: The recipe details are being added within the recipe card which is not readable. Need to implement the code in such a way that when I click on a recipe card, the recipe details open in a modal window.
+
+19.07.2023
+Added view button to the recipe card
+Added description field to the add recipe form
+The view recipe button on the recipe card is not functional yet. Clicking on this button must open the recipe details with ingredients and method in a modal window, not under the recipe card. Yesterday tried to implement this with some plan which did not work, but today planning to dynammically hide and show contents with modal window. Have been working on it today and correcting some code for this.
+
