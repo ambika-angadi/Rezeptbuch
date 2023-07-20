@@ -25,7 +25,7 @@
              <div class="header-text">
                 <p>Welcome to our Recipes book</p>
                 <h1><i> Explore <span> our Recipes</span><br> Collection....<br></i></h1>
-                <p class="message"> <i>Dear Visitor, this is a platform where you can contribute your<br> recipes. Enjoy hundreds of recipes contributed by other members<br> and please don't forget to contribute your best recipes helping us to<br> grow this community....Also please do rate other members' recipes <br>and encourage us to grow further....Looking forward to your<br><span> yummy contribution!!!!</span></i></p>
+                <p class="message"> <i>Dear Visitor, this is a platform where you can contribute your<br> recipes. Enjoy hundreds of recipes contributed by other members<br> and please don't forget to contribute your best recipes helping us to<br> grow this community....<br>Looking forward to your<span> yummy contribution!!!!</span></i></p>
             </div>
         </div>
         <div>
@@ -93,48 +93,49 @@
       <h1 class="sub-title">Here is my favorites list....</h1>
       <ul class="favorites-list" id="favorites_list">
         <!-- Existing favorite recipe(s) -->
-        <li class="favorite">
-          <!--<img src="assets/Mango-Lassi.jpg" width="200" height="300">
-          <h3>Mango Lassi</h3>
-          <p>Drink made with mango and yoghurt</p>
-          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>-->
-        </li>
+        <li class="favorite"></li>
       </ul>
     </div>
   </div>
 
-    <!-------------------------------Add Recipe and Card------------------------->
-        <div id="add">
+      <!---------------------------Recipe modal window---------------------------->
+      <div id="add">
         <div>
-        <h2>Add Recipe Description</h2>
-         
-        <label id="name-lbl">Name :</label><br>
-        <input size="50" type="text" id="name" name="name"><br>
-        <label id="Description">Description: :</label><br>
-        <textarea id="Description_area" rows="3" cols="53"></textarea><br>
-        <label id="Ingredients">Ingredients: :</label><br>
-        <textarea id="Ingredients_area" rows="3" cols="53"></textarea><br>
-        <label id="Method">Method:</label><br>
-        <textarea id="Method_area" rows="3" cols="53"></textarea><br>
-        <label id="Image">Image Source:</label><br>
-        <input size="50" type="text" id="image_src" name="image-src"><br>
-        <label id="category">category:</label><br>
-        <select id="category-op">
-         <option >----------------------</option>
-         <option value="starter" >Starters & Drinks</option>
-         <option value="main">Main course</option>
-         <option value="dessert">Desserts</option>
-        
-        </select><br>
-        <!--<button onclick="viewRecipe()">View Recipe</button>-->
-        
-        <br><button onclick="addRecipe()">Add Recipe Card</button>
-        <input type="reset" value="cancel" onclick="hide()"> 
-
-        <!----<br><button onclick="editRecipe()">Edit Recipe</button>
-        <input type="reset" value="Cancel" onclick="hide()">---->  
+          <h2>Add Recipe Description</h2>
+          <label id="name-lbl">Name:</label><br>
+          <input size="50" type="text" id="name" name="name"><br>
+          <label id="Description">Description:</label><br>
+          <textarea id="Description_area" rows="3" cols="53"></textarea><br>
+          <label id="Ingredients">Ingredients:</label><br>
+          <textarea id="Ingredients_area" rows="3" cols="53"></textarea><br>
+          <label id="Method">Method:</label><br>
+          <textarea id="Method_area" rows="3" cols="53"></textarea><br>
+          <label id="Image">Image Source:</label><br>
+          <input size="50" type="text" id="image_src" name="image-src"><br>
+          <label id="category">Category:</label><br>
+          <select id="category-op">
+            <option>----------------------</option>
+            <option value="starter">Starters & Drinks</option>
+            <option value="main">Main course</option>
+            <option value="dessert">Desserts</option>
+          </select><br>
+          <!--<button onclick="viewRecipe()">View Recipe</button>-->
+          <br>
+          <button onclick="addRecipe()">Add Recipe Card</button>
+          <input type="reset" value="Cancel" onclick="hide()">
         </div>
+      </div>
+    
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal" class="close">&times;</span>
+          <h3>Ingredients</h3>
+          <p id="modalIngredients"></p>
+          <h3>Method</h3>
+          <p id="modalMethod"></p>
         </div>
+      </div>
+    
         <script src="script.js"></script>
     </body>
 </html>
