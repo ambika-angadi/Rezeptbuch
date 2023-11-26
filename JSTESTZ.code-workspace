@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../JSTESTZ"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Desktop/Project"
+		},
+		{
+			"path": "../Recipebook"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Rezeptbuch"
+	}
+}
